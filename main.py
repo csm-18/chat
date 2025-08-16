@@ -1,5 +1,13 @@
+from flask import Flask
+
 def main():
-    print("Hello from chat!")
+    app = Flask(__name__)
+
+    @app.route('/')
+    def home():
+        return "Hello, World!"
+
+    app.run(debug=True)
 
 
 if __name__ == "__main__":
